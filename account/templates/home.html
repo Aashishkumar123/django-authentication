@@ -1,0 +1,10 @@
+{% extends "base.html" %} 
+
+{% block title %}Home{% endblock title %} 
+
+{% block body_content %}
+    {% include "navbar.html" %}
+    <div class="mt-5 container text-center">
+        <h1>Welcome {{user}}</h1>
+    </div>
+{% endblock body_content %}

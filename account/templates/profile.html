@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+ 
+{% block title %}Profile{% endblock title %}
+
+{% block body_content %}
+    {% include "navbar.html" %}
+    <div class="container mt-5 p-5 bg-white shadow" style="width: 40%;border-radius: 10px;">
+        <h1 class="text-center">User Profile</h1>
+        <div class="mt-3">
+            <table class="table table-bordered text-center">
+                <tr>
+                    <td>Username</td>
+                    <td>{{user.username}}</td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td>{{user.first_name}}</td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>{{user.last_name}}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{{user.email}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock body_content %}

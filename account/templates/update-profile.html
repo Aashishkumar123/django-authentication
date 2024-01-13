@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+
+{% load crispy_forms_tags %}
+
+{% block title %}Profile{% endblock title %} 
+
+{% block body_content %}
+    {% include "navbar.html" %}
+    <div class="container mt-5 p-5 bg-white shadow" style="width: 40%; border-radius: 10px">
+        {% include "message.html" %}
+        <h1 class="text-center">Update Profile</h1>
+        <form action="" class="mt-" method="post" novalidate>
+            {% csrf_token %} {{user_update_form | crispy}}
+            <div class="d-grid mt-4">
+              <button class="btn btn-purple py-2 shadow-sm">Update</button>
+            </div>
+          </form>
+    </div>
+{% endblock body_content %}
